@@ -3,7 +3,8 @@ body {
 }
 
 header {
-  height: 75px;
+  max-height: 10vh;
+  /* min-height: 50px; */
   border-bottom: 1px solid black;
   display: flex;
   justify-content: center;
@@ -15,13 +16,12 @@ h1 {
 }
 
 .hero-image > img {
-  width: 800px;
-  height: auto;
-  margin-top: 16px;
+  width: 100%;
+  margin-top: .5vw;
 }
 
 .container {
-  width: 1000px;
+  width: 80vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,7 @@ h1 {
 
 .articles {
   display: flex;
+  flex-direction: row;
 }
 
 article {
@@ -39,7 +40,7 @@ article {
 }
 
 article > img {
-  width: 200px;
+  width: 100%;
   margin-bottom: 10px;
 }
 
@@ -55,4 +56,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 800px) {
+  
+  .articles {
+    flex-direction: column;
+  }
+
 }
